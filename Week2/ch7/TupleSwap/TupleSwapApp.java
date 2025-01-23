@@ -16,6 +16,8 @@ import static java.lang.System.*;
 
 public class TupleSwapApp {
     public static void main(String[] args) {
+
+        // swapping using an array
         int a = 5;
         int b = 10;
         out.println("Original: a = " + a + " and b = " + b);
@@ -33,6 +35,24 @@ public class TupleSwapApp {
         a = array[2];
         b = array[3];
         out.println("Swapped: a = " + a + " and b = " + b);
+
+        // swapping using XOR
+        int x = 5;
+        int y = 3;
+        out.println("Original: x = " + x + " and y = " + y);
+
+        x = x ^ y;
+        y = x ^ y;
+        x = x ^ y;
+        out.println("Swapped: x = " + x + " and y = " + y);
+
+        // swapping using finagling
+        int n = 5;
+        int m = 10;
+        out.println("Original: n = " + n + " and m = " + m);
+        n = n + 5;
+        m = m - 5;
+        out.println("Swapped: n = " + n + " and m = " + m);
 
     }// end main
 }// end class
